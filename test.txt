@@ -1,0 +1,15 @@
+Happy path:
+1) Lietotajs Ievada -> /start -> Поделить число на 1 -> Lietotajs ievada 3127 -> Programma atspoguļo 3127
+2) Lietotajs Ievada -> /start -> Конвертер валют -> Lietotajs ievada 3127 -> Euro -> Programma atspoguļo: Итак 3127Euro это немного больше чем 0₽
+
+Use case:
+1) Lietotajs Ievada -> /start -> Угадай число(1-100) -> Lietotajs ievada 101 -> Programma atspoguļo О НЕТ, ТЫ ПРОИГРАЛ!
+2) Lietotajs Ievada -> /start -> Конвертер валют -> Lietotajs ievada 101 -> Lietotajs ievada обезьяна -> Programma atspoguļo: Итак 132обезьяна это немного больше чем 0₽
+3) Lietotajs Ievada -> /start -> Угадай число(1-100) -> Lietotajs ievada 10 1 -> Programma atspoguļo О НЕТ, ТЫ ПРОИГРАЛ!
+4) Lietotajs Ievada -> /star -> Programma atspoguļo: Такого еще нет.
+
+Edge case:
+1) Lietotajs Ievada -> /start -> Угадай число(1-100) -> Lietotajs ievada 101.1 -> Programma atspoguļo О НЕТ, ТЫ ПРОИГРАЛ!
+2) Lietotajs Ievada -> /start -> Поделить число на 1 -> Lietotajs ievada обезьяна -> Programma atspoguļo Итак обезьяна делёное на 1 равно обезьяна
+3) Lietotajs Ievada -> /start -> Угадай число(1-100) -> Lietotajs ievada -5 -> Programma atspoguļo О НЕТ, ТЫ ПРОИГРАЛ!
+4) Lietotajs Ievada -> /start -> Конвертер валют -> Lietotajs ievada гага -> Programma atspoguļo: Имей совесть! Хоть тут напиши число.
