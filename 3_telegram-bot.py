@@ -108,6 +108,7 @@ def auto_divider(message):
                 button2 = types.KeyboardButton("Поделить число на 1")
                 button3 = types.KeyboardButton("Конвертер валют")
                 button4 = types.KeyboardButton("Угадай мой ник")
+                markup.add(button1, button2, button3, button4)
                 app.send_message(message.chat.id, text='Последние 10 запросов:\n' + last_ten.format(message.from_user), reply_markup=markup)
                 blocker = 0
             else:
@@ -145,6 +146,7 @@ def auto_divider(message):
             button2 = types.KeyboardButton("Поделить число на 1")
             button3 = types.KeyboardButton("Конвертер валют")
             button4 = types.KeyboardButton("Угадай мой ник")
+            markup.add(button1, button2, button3, button4)
             app.send_message(message.chat.id, text='ОЙОЙОЙОЙ SOMETHING WENT WRONG! Пиши вследующий раз цифры, бал1.'.format(message.from_user), reply_markup=markup)
             blocker = 0
 
@@ -154,10 +156,11 @@ def prof_converter(message):
         blocker += 1
         global summa
         summa = message.text
-        if isinstance(summa, int):
+        try:
+            sum = int(summa)
             sent_message = app.send_message(message.chat.id, text="Из какой валюты конвертируем?")
             app.register_next_step_handler(sent_message, prof_converter_final)
-        else:
+        except:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton("Угадай число(1-100)")
             button2 = types.KeyboardButton("Поделить число на 1")
